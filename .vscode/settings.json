@@ -1,0 +1,20 @@
+{
+	"emeraldwalk.runonsave": {
+		"shell": "pwsh",
+		"commands": [
+			{
+				"match": "\\.dart$",
+				"cmd": "${workspaceRoot}/.vscode/dartfmt.exe -l 100 ${file} > ${file}.tmp",
+			},
+			{
+				"match": "\\.dart$",
+				"cmd": "del ${file}",
+			},
+			{
+				"match": "\\.dart$",
+				"cmd": "move ${file}.tmp ${file}",
+			},
+		],
+	},
+	"dart.enableSdkFormatter": false,
+}
