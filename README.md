@@ -20,3 +20,7 @@ A quick and (relatively) easy tutorial on how to use a customised dart formatter
 ## Additional notes:
 - I needed it to stop forcing a blank line after functions, so I went and found [this](https://github.com/dart-lang/dart_style/commit/8b5aa7e9d090def190d4ae44a21c9d689928935f) commit, and forced the needsDouble variables to false. 
 - Yes, I know the current method is a bit janky, but simply writing to the same file creates endless problems, and I couldn't find any better method. If you find one, feel free to share it!
+
+## Changelog
+### 22.03.2022 
+- Add a check if the format was successful before moving the temp file
