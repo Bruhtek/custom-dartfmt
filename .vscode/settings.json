@@ -8,11 +8,11 @@
 			},
 			{
 				"match": "\\.dart$",
-				"cmd": "del ${file}",
+				"cmd": "if([String]::IsNullOrWhiteSpace((Get-content ${file}.tmp))) { } else { del ${file} }",
 			},
 			{
 				"match": "\\.dart$",
-				"cmd": "move ${file}.tmp ${file}",
+				"cmd": "if([String]::IsNullOrWhiteSpace((Get-content ${file}.tmp))) { } else { move ${file}.tmp ${file} }",
 			},
 		],
 	},
